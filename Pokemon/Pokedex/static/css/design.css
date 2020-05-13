@@ -1,0 +1,11 @@
+#bground{
+	background: url("/static/images/types.jpg") 50% 0 fixed;
+	color: white;
+    height: 650px;
+}
+#welcome{
+	color: black;
+}
+tbody{
+	background: red;
+}

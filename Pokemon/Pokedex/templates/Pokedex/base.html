@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="{% static 'css/design.css' %}">
+	<title></title>
+</head>
+<body id="bground">
+
+	  <nav class="navbar navbar-light navbar-static-top" style="background-color: #ff4d4d;">
+  			<a class="navbar-brand" href="{% url 'Pokedex:home_page' %}">
+    		<img src='{% static "images/charizard.png" %}' width="30" height="30" class="d-inline-block align-top" alt="">Pokedex</a>
+    		<a class= "navbar-link" href="#">Home</a>
+    		<a class= "navbar-lin" href="#">Types</a>
+	  </nav>
+
+	<div class="container">
+	  	
+	</div>
+	  {% block body_block %}
+
+	  {% endblock %}
+	
+
+</body>
+</html>

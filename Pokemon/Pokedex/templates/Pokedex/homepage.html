@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% extends "Pokedex/base.html" %}
+
+
+
+	{% block body_block %}	
+	<h2 id="welcome">Welcome to the Pokedex!</h2>
+	<a href="{% url 'Pokedex:form_page' %}"><button type="button" class="btn btn-danger">Add Pokemon</button></a>
+	<div class="container">	
+	<table class="table table-dark">
+	  <thead>
+	    <tr>
+	      <th scope="col">Pokemon</th>	
+	      <th scope="col">Type</th>	
+	      <th scope="col">Hit Points</th>	
+	    </tr>
+	  </thead>
+	  {% for pokemon in pokemon_records %}
+	  <tbody>
+		<tr>
+		  <td>{{ pokemon.name }}</td>
+		  <td>{{ pokemon.the_type }}</td>
+		  <td>{{ pokemon.hp }}</td>
+		</tr>
+	  </tbody>
+	  {% endfor %}
+	</table>
+	</div>
+	{% endblock %}
+
+

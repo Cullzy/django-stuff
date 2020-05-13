@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends "Pokedex/base.html" %}
+
+	{% block body_block %}
+	<title>Add Pokemon</title>
+	<div class="container">
+ 	<div class="jumbotron">
+	<h1>Please add a pokemon to the Pokedex</h1>
+	<form method="POST">
+		{{form.as_p}}
+		{% csrf_token %}
+		<input type="submit" value="Add Pokemon">
+	</form>
+	</div>
+	</div>
+	{% endblock %}
